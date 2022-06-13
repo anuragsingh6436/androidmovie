@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detail_header_layout"
+        android:layout_width="match_parent"
+        android:elevation="2dp"
+        android:layout_height="40dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/share_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_share_icon"
+            android:onClick="@{() -> viewModel.onShareIconClick()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="10dp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/bookmark_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:onClick="@{() -> viewModel.onBookMarkIconClick()}"
+            android:src="@{viewModel.isMovieSelected() ? @drawable/ic_bookmark_selected : @drawable/ic_bookmark_unselected}"
+            android:layout_marginRight="16dp"
+            app:layout_constraintEnd_toStartOf="@id/share_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.android.dagger.viewModel.DetailActivityViewModel" />
+    </data>
+</layout>
