@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.android.dagger.Network.ApiHelper
 import com.example.android.dagger.Network.RetrofitBuilder
 import com.example.android.dagger.R
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun addItemDecoration() {
         with(dataBinding) {
+            recyclerView.layoutManager = GridLayoutManager(this@MainActivity,2)
             recyclerView.addItemDecoration(VerticalItemDecorator(20))
 
         }

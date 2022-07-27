@@ -27,7 +27,6 @@
             android:orientation="vertical"
             android:clipChildren="false"
             android:clipToPadding="false"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:adapter="@{viewModel.adapter}"
             app:itemsList="@{viewModel.itemsList}"
             app:layout_constraintBottom_toBottomOf="parent"

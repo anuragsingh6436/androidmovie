@@ -6,7 +6,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/motion_layout"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="wrap_content"
         android:layout_margin="4dp"
         android:onClick="@{() -> model.openDetailPage()}"
         android:background="@drawable/circular_background">
