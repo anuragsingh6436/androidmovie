@@ -1,5 +1,5 @@
 # Created a App to fetch movies List from remote server and show it on the screen.
- Created a detail page of any movie that is being clicked 
+ Created a detail page of any movie that is being clicked \n
  Also handled case where data is being saved in roomdatabase and will be fetched in case of failure.
  Created a Search bar where you can search specific movie from list.
  Created a BookMarkFragment where bookmark elements are being shown.
